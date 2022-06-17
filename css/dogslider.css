@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+.body{
+    /* padding: 20px; */
+    background: none;
+    user-select: none;
+}
+
+[type=radio] {
+    display: none;
+}
+
+#slider{
+    height: 35vw;
+    /* position: relative; */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-bottom: 80px;
+}
+
+#slider .label{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transfor 0.1s ease;
+    padding-top: 60px;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3{
+    box-sizing: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(-30%,0,-200px);
+} 
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4{
+    box-sizing: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide2, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5{
+    box-sizing: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+    transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide3, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1{
+    box-sizing: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2{
+    box-sizing: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(30%,0,-200px);
+} 
+
+.misvis{
+	background-color: green;
+	/*padding: 20px 0px;*/
+	margin-top: 6px;
+	padding-left: 15%;
+	margin-bottom: 20px;
+	background-color: none;
+	text-align: center;
+	display: flex;
+}
+.bottom{
+	background-color: green;
+}
+.mission, .missions {
+	background-color: green;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	color: white;
+
+	
+}
+.missions{
+	margin-left: 20%;
+}
+
+#con{
+	color: white;
+}
+.mss{
+	background-color: green;
+	text-align: center;
+	display: inline-flex;
+	color: white;
+	text-align: center;
+	display: inline-flex;
+}
+
+.foot{
+	text-align: center;
+	background-color: black;
+	margin-top: 5px;
+	color: white;
+}
+h5{
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel-wrapper{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+.Banner1, .Banner2, .Banner3, .Banner4 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img{
+    width: 120%;
+    height: 100vh;
+    position: absolute;
+    top: 130px;
+    transform: translate(-50% -50%);
+    animation: zoom-out 3s linear infinite;
+    background-size: contain;
+}
+@keyframes zoom-out{
+    100%{
+        width: 100%;
+    }
+}
+.text-box{
+    width: 600px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    color: black;
+}
+.text-box .TEXT{
+    margin-bottom: 40px;
+}
+.text-box .TextParagraph{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+.text-box span{
+    background: red;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+.Banner1{
+    animation: slide1 12s linear infinite;
+}
+.Banner2{
+    animation: slide2 12s linear infinite;
+}
+.Banner3{
+    animation: slide3 12s linear infinite;
+}
+.Banner4{
+    animation: slide4 12s linear infinite;
+}
+@keyframes slide1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+@keyframes slide2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider {
+    width: 800px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin: 50px auto;
+    border: 2px solid black;
+  }
+  .image-container {
+    width: 1500px;
+    background-color: pink;
+    height: 300px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+  }
+  .slide {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+  #slide-1:target ~ .image-container {
+    left: 0px;
+  }
+  #slide-2:target ~ .image-container {
+    left: -500px;
+  }
+  #slide-3:target ~ .image-container {
+    left: -1000px;
+  }
+  .buttons {
+    position: relative;
+    top: -20px;
+  }
+  .buttons a {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: lightgreen;
+  } */

@@ -1,0 +1,482 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  margin-bottom: 100%;
+}
+
+/* .body{
+  background: #eee;
+  user-select: none;
+} */
+
+/* [type=radio] {
+  display: none;
+} */
+
+#slider{
+  height: 10vw;
+  /* position: relative; */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slider .label{
+  margin: auto;
+  width: 60%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  transition: transfor 0.1s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3{
+  box-sizing: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+} 
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4{
+  box-sizing: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide2, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5{
+  box-sizing: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide3, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1{
+  box-sizing: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2{
+  box-sizing: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+} 
+
+button{
+	background-color: #9f6060;
+}
+
+button:hover {
+  opacity: 1.0;
+}
+.misvis{
+	background-color: #9f6060;
+	/*padding: 20px 0px;*/
+	margin-top: 6px;
+	padding-left: 15%;
+	margin-bottom: 20px;
+	background-color: none;
+	text-align: center;
+	display: flex;
+}
+.bottom{
+	background-color: #9f6060;
+}
+.mission, .missions {
+	background-color: #9f6060;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	color: white;
+
+	
+}
+.missions{
+	margin-left: 20%;
+}
+
+#con{
+	color: #4c0b2f;
+}
+.mss{
+	background-color: #9f6060;
+	text-align: center;
+	display: inline-flex;
+	color: white;
+	text-align: center;
+	display: inline-flex;
+}
+
+.foot{
+	text-align: center;
+	background-color: black;
+	margin-top: 5px;
+	color: white;
+}
+h5{
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .dogSlider {
+  background: none ;
+}
+
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  font-family: 'Odibee Sans', cursive;
+  margin-bottom: 0;
+}
+
+#css {
+  color: yellow;
+  font-family: 'Odibee Sans', cursive;
+}
+
+.carousel-wrapper {
+  height: 400px;
+  position: relative;
+  width: 800px;
+  display: block;
+  margin: 50px auto;
+  border: 2px solid black;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+
+}
+
+.arrow-next {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background-image: url('/images/chicken1.jpg');
+  background-size: cover;
+}
+
+.item-2 {
+  background: url('/images/dogs.webp');
+  background-size: cover;
+}
+
+.item-3 {
+  background: url('/images/fish.jpg');
+  background-size: cover;
+  
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+#item-1:target ~ .item-1 {
+  opacity: 1;
+
+}
+
+#item-2:target ~ .item-2,
+#item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+} */
+
+/* #slider {
+  position: relative;
+  width: 50%;
+  height: 30vw;
+  margin: 80px auto;
+  font-family: 'Helvetica Neue', sans-serif;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+input[type=radio] {
+  position: relative;
+  top: 108%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+}
+
+
+input[type=radio]:nth-child(5) {
+  margin-right: 0px;
+}
+
+input[type=radio]:checked {
+  opacity: 1;
+}
+
+
+
+
+#slider label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 400ms ease;
+}
+
+#slide1 {
+  background-image: url('/images/chicken1.jpg');
+  background-size: cover;
+}
+
+#slide2 {
+  background: yellowgreen;
+}
+
+#slide3 {
+  background: dodgerblue;
+}
+
+#slide4 {
+  background: slateblue;
+}
+
+#slide5 {
+  background: violet;
+} */
+
+
+/* Slider Functionality */
+
+/* Active Slide */
+/* #s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+  box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+  transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+/* #s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+} */
+
+
+/* Next to Next Slide
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transform: translate3d(30%, 0, -250px);
+} */
+
+/* Previous to Previous Slide */
+/* #s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transform: translate3d(-30%, 0, -250px);
+}
+
+/* Previous Slide */
+/* #s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+} */ */
+ */
+
+
+/* .Dog-slider{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+      transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+      transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.Dog-slider span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--1)*45deg)) translateZ(350px);
+}
+
+.Dog-slider span .Dog-slider-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 2s;
+}
+
+.Dog-slider span:hover .Dog-slider-image {
+  transform: translateY(-50px) scale(1.2);
+} */
+
+
